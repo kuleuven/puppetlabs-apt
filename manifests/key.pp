@@ -64,11 +64,11 @@ define apt::key (
 
         case $facts['os']['name'] {
           'Debian': {
-            stdlib::ensure_packages(['gnupg'])
+            ensure_packages(['gnupg'])
             Apt::Key<| title == $title |>
           }
           'Ubuntu': {
-            stdlib::ensure_packages(['gnupg'])
+            ensure_packages(['gnupg'])
             Apt::Key<| title == $title |>
           }
           default: {

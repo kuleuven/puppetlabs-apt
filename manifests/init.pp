@@ -393,10 +393,10 @@ class apt (
 
   case $facts['os']['name'] {
     'Debian': {
-      stdlib::ensure_packages(['gnupg'])
+      ensure_packages(['gnupg'])
     }
     'Ubuntu': {
-      stdlib::ensure_packages(['gnupg'])
+      ensure_packages(['gnupg'])
     }
     default: {
       # Nothing in here
